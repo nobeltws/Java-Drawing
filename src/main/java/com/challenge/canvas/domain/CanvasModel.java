@@ -18,8 +18,9 @@ public class CanvasModel {
 		return this;
 	}
 
-	public void setCanvas(char[][] canvas) {
+	public CanvasModel setCanvas(char[][] canvas) {
 		this.canvas = canvas;
+		return this;
 	}
 
 	public void drawCanvas() {

@@ -50,11 +50,5 @@ public class CanvasServiceTest {
     		canvasService.readInput(actualInput);
     	});
     }
-    
-    @Test
-    public void runApplicationSuccessTest() throws IOException{
-    	String actualInput = "C 4 4";
-    	canvasService.runCanvasApplication(actualInput);
-    	//TODO
-    }
+   
 }

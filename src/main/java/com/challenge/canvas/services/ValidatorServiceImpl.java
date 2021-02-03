@@ -80,7 +80,7 @@ public class ValidatorServiceImpl implements ValidatorService {
         }
     }
 
-    public void validateRectangle(ShapeInput shapeInput) {
+    private void validateRectangle(ShapeInput shapeInput) {
         CanvasModel canvasModel = shapeInput.getCanvasModel();
         int x1 = shapeInput.getX1();
         int x2 = shapeInput.getX2();
@@ -95,7 +95,7 @@ public class ValidatorServiceImpl implements ValidatorService {
         }
     }
 
-    public void validateFillColor(FillInput fillInput) {
+    private void validateFillColor(FillInput fillInput) {
         CanvasModel canvasModel = fillInput.getCanvasModel();
         int x = fillInput.getX();
         int y = fillInput.getY();
