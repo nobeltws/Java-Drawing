@@ -19,6 +19,15 @@ public class CanvasServiceTest {
 	private Helper helper;
 	private ValidatorService validatorService;
 	
+	private char[][] expectedEmptyCanvas = {
+			{'-','-','-','-','-','-'},
+			{'|',' ',' ',' ',' ','|'},
+			{'|',' ',' ',' ',' ','|'},
+			{'|',' ',' ',' ',' ','|'},
+			{'|',' ',' ',' ',' ','|'},
+			{'-','-','-','-','-','-'}
+		};
+	
 	@BeforeEach
     public void init() {
 		drawingService = new DrawingService();
@@ -27,7 +36,7 @@ public class CanvasServiceTest {
     }
 
     @Test
-    public void readCreateCanvasInputSuccessTest() throws IOException{
+    public void readInputSuccessTest() throws IOException{
     	String actualInput = "C 4 4";
     	String[] actualReturnInput = canvasService.readInput(actualInput);
     	String[] expected = {"C","4","4"};
@@ -40,5 +49,12 @@ public class CanvasServiceTest {
     	assertThrows(NullPointerException.class, () -> {
     		canvasService.readInput(actualInput);
     	});
+    }
+    
+    @Test
+    public void runApplicationSuccessTest() throws IOException{
+    	String actualInput = "C 4 4";
+    	canvasService.runCanvasApplication(actualInput);
+    	//TODO
     }
 }
